@@ -1,0 +1,58 @@
+extends layout
+
+block content
+	.hero-unit
+		h1 Psalm Psycadelica
+		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis odio vel felis interdum mollis. 
+		iframe(width='75%', height='166', scrolling='no', frameborder='no', src='http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F59582065&amp;auto_play=false&amp;show_artwork=false&amp;color=382F2E')
+	.row-fluid
+		.span3
+			ul.thumbnails
+				li
+					a.thumbnail(href='#pictures', data-toggle='modal')
+						img.img-rounded(src='/img/pic01.jpg')
+						.caption
+							p Aenean congue, justo at tempor auctor, nunc enim mollis neque, id cursus odio ante quis quam.
+				li
+					a.thumbnail(href='#pictures', data-toggle='modal')
+						img.img-rounded(src='/img/pic02.jpg')
+						.caption
+							p Vivamus semper augue quis enim sagittis scelerisque.
+				li
+					a.thumbnail(href='#pictures', data-toggle='modal')
+						img.img-rounded(src='/img/pic03.jpg')
+						.caption
+							p Mauris venenatis mauris a quam vestibulum eu rhoncus nisi varius.
+		.span6
+			:markdown
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et sollicitudin felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean congue, justo at tempor auctor, nunc enim mollis neque, id cursus odio ante quis quam. Morbi luctus, sem et faucibus vestibulum, arcu sem venenatis nisl, in imperdiet felis magna in lorem. Sed non malesuada quam. Maecenas et placerat sapien. Morbi auctor orci fringilla lectus rhoncus vulputate posuere magna fringilla. Nam facilisis viverra rutrum. Integer vestibulum consectetur erat, id pretium quam gravida vel. Proin neque mauris, feugiat vitae pharetra id, imperdiet sed diam.
+
+				Quisque tincidunt, nibh in adipiscing blandit, justo libero interdum velit, id convallis erat sem nec sapien. Duis sagittis dictum felis, aliquet placerat ante bibendum eget. Suspendisse a nulla metus. Ut congue, diam et bibendum venenatis, tortor lacus ultrices odio, vitae sagittis elit nunc sit amet nisl. Maecenas varius nisi ac erat rutrum vitae porttitor erat venenatis. In at sapien ut est tristique ultricies. Nunc molestie consequat nisl vitae rhoncus. Aliquam erat volutpat. Aliquam vel quam nisi, quis tincidunt est. Pellentesque luctus turpis eu libero laoreet vestibulum. Nulla facilisi. Quisque id ultrices urna. Donec ultrices, tortor at elementum iaculis, erat libero consequat quam, id tincidunt est ipsum eget massa. Mauris fermentum, arcu at venenatis auctor, ipsum nisl imperdiet massa, et luctus lacus arcu ac leo.
+
+				Sed ut commodo nunc. Aenean elit leo, mollis at ultrices sed, rhoncus dictum magna. Quisque tristique mattis adipiscing. Vivamus semper augue quis enim sagittis scelerisque. Mauris venenatis mauris a quam vestibulum eu rhoncus nisi varius. Aenean id lorem dui, in cursus risus. Nullam cursus tincidunt nulla, nec luctus odio ornare accumsan. Morbi suscipit bibendum felis, quis cursus tortor condimentum eget. Morbi feugiat leo at massa bibendum at sollicitudin odio commodo. Sed in justo sit amet mauris convallis placerat id ut urna.
+
+				Mauris enim lectus, mattis eu pellentesque id, vulputate quis ipsum. Fusce lacinia nibh vel dui commodo feugiat. Nunc ullamcorper auctor nisl nec posuere. Fusce eu erat nisl. Duis ullamcorper laoreet convallis. Phasellus blandit, est nec adipiscing congue, lacus magna volutpat eros, id ornare elit ante sed est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse at mauris vitae metus sodales pharetra id ac dolor. Vestibulum condimentum, lacus ut feugiat sodales, nibh metus vehicula nunc, in eleifend ligula dui eget ligula. Morbi congue euismod metus dictum pharetra. Fusce non cursus massa. Fusce ullamcorper scelerisque ante in semper. Pellentesque consequat neque risus.
+
+				In hac habitasse platea dictumst. Proin cursus hendrerit tortor vitae fermentum. Curabitur id molestie sem. Integer erat sapien, fringilla dictum condimentum id, interdum vitae elit. Nunc vitae interdum ipsum. Cras non metus tellus, vitae mattis nisi. Duis vitae magna tempor turpis sollicitudin cursus a et enim. Morbi at venenatis purus. Cras vulputate felis vitae risus placerat ullamcorper. Suspendisse potenti. Pellentesque ultrices dolor a quam fringilla malesuada quis at justo. Suspendisse molestie neque ac justo laoreet id imperdiet turpis fringilla. Maecenas facilisis, sem sed facilisis auctor, ante dui vulputate elit, nec laoreet sem massa sit amet ante. Aliquam faucibus scelerisque quam porttitor lacinia. Ut convallis vehicula nunc, a commodo tortor suscipit a. Aliquam at molestie urna.
+
+	.modal.hide.fade#pictures(tabindex='-1', role='dialog', aria-labelledby='picturesLabel', aria-hidden='true')
+		.modal-header
+			button.close(type='button', data-dismiss='modal', aria-hidden='true') &times;
+			h3 Psalm Psycadelica
+		.modal-body
+			#pictureCarousel.carousel.slide
+				.carousel-inner
+					.active.item
+						img.img-rounded(src='/img/pic01.jpg')
+						.caption
+							p Aenean congue, justo at tempor auctor, nunc enim mollis neque, id cursus odio ante quis quam.
+					.item
+						img.img-rounded(src='/img/pic02.jpg')
+						.caption
+							p Vivamus semper augue quis enim sagittis scelerisque.
+					.item
+						img.img-rounded(src='/img/pic03.jpg')
+						.caption
+							p Mauris venenatis mauris a quam vestibulum eu rhoncus nisi varius.
+				a.carousel-control.left(href='#pictureCarousel', data-slide='prev')&lsaquo;
+				a.carousel-control.right(href='#pictureCarousel', data-slide='next')&rsaquo;
